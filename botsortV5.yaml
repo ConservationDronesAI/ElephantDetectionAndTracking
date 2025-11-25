@@ -1,0 +1,29 @@
+# Tracker settings for BoT-SORT
+tracker_type: botsort  # required
+
+# Detection thresholds
+track_high_thresh: 0.20     # Upper confidence threshold to start tracking
+track_low_thresh: 0.05      # Lower confidence threshold for keeping track
+new_track_thresh: 0.75      # Confidence threshold for starting new track
+
+# Matching and buffer settings
+track_buffer: 90            # Number of frames to keep lost tracks
+match_thresh: 0.85          # IoU threshold for matching detections to existing tracks
+fuse_score: True            # Whether to fuse object score with re-ID similarity
+
+# Global motion compensation (GMC)
+gmc: False                  # Important to include, even if False
+gmc_method: sparseOptFlow   # Method for GMC
+
+# Appearance matching
+proximity_thresh: 0.5       # Distance threshold for considering appearance
+appearance_thresh: 0.25     # Re-ID similarity threshold
+with_reid: True             # Whether to use Re-ID module
+fast_reid: True             # Needed if using Ultralytics' default re-ID model
+
+# Optional but often expected to avoid internal errors
+ablation: False             # Needed if using custom config
+
+# (Optional, custom extensions like yours)
+size_ratio_thresh: 0.8      # Your custom extension — fine to keep if you check for it in code
+iou_thresh: 0.5             # Your custom extension — same as above
