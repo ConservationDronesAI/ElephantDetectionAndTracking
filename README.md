@@ -29,9 +29,9 @@ It solves the common problem of "ID Switching" (where a tracker loses an animal 
 
 ```text
 ├── notebooks/
-│   ├── 1_Training_Pipeline.ipynb     # Train YOLOv11 on your custom dataset
-│   ├── 2_Evaluation_Pipeline.ipynb   # Calc Precision, Recall, mAP & Confusion Matrix
-│   └── 3_Inference_Pipeline.ipynb    # Main Pipeline: Tracking -> ReID -> Viz -> Stats
+│   ├── TrainingModel.ipynb     # Train YOLOv11 on your custom dataset
+│   ├── EvaluateModel.ipynb   # Calc Precision, Recall, mAP & Confusion Matrix
+│   └── ElephantTrackingPipeline.ipynb    # Main Pipeline: Tracking -> ReID -> Viz -> Stats
 ├── configs/
 │   ├── botsortV4.yaml                # Tracker configuration
 │   ├── TestData.yaml                 # Dataset configuration
